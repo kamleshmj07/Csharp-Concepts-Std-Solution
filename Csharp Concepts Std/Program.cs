@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Csharp_Concepts_Std.MemberShadowing;
 using Csharp_Concepts_Std.Threading;
 using Csharp_Concepts_Std.ValueReferenceType;
 
@@ -34,6 +35,14 @@ namespace Csharp_Concepts_Std
             // Passing ref-types by ref.
             PassingRefTypesAsRefTypes();
             #endregion
+
+            #endregion
+
+            #region MemberShadowing
+
+            //ThreeDCircle obj3DCircle = new ThreeDCircle();
+            //obj3DCircle.Draw();
+            //((Circle)obj3DCircle).Draw();
 
             #endregion
 
