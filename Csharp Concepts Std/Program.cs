@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Csharp_Concepts_Std.MemberShadowing;
 using Csharp_Concepts_Std.Threading;
 using Csharp_Concepts_Std.ValueReferenceType;
+using Csharp_Concepts_Std.Exceptions;
 
 namespace Csharp_Concepts_Std
 {
@@ -32,8 +33,7 @@ namespace Csharp_Concepts_Std
             #endregion
 
             #region Passing Reference Types by Reference
-            // Passing ref-types by ref.
-            PassingRefTypesAsRefTypes();
+            //PassingRefTypesAsRefTypes();
             #endregion
 
             #endregion
@@ -43,6 +43,16 @@ namespace Csharp_Concepts_Std
             //ThreeDCircle obj3DCircle = new ThreeDCircle();
             //obj3DCircle.Draw();
             //((Circle)obj3DCircle).Draw();
+
+            #endregion
+
+            #region Exception Handling
+
+            #region Multiple Exception Handling
+            //MultipleExceptionHandling();
+            #endregion
+
+
 
             #endregion
 
@@ -93,15 +103,31 @@ namespace Csharp_Concepts_Std
             Console.ReadLine();
         }
 
-        private static void PassingRefTypesAsRefTypes()
+        // Multiple Exception Handling
+        private static void MultipleExceptionHandling()
         {
-            Console.WriteLine("***** Passing Person object by reference *****");
-            Person mel = new Person("Mel", 23);
-            Console.WriteLine("Before by ref call, Person is:");
-            mel.Display();
-            SendAPersonByReference(ref mel);
-            Console.WriteLine("After by ref call, Person is:");
-            mel.Display();
+            Console.WriteLine("***** Handling Multiple Exceptions *****\n");
+            Car myCar = new Car(90, "Rusty");
+            try
+            {
+                // Case 1 : Trip Arg out of range exception.
+                //myCar.Accelerate(-10);
+
+                // Case 2 : Car is dead exception.
+                for (int i = 0; i < 12; i++)
+                {
+                    myCar.Accelerate(10);
+                }
+
+            }
+            catch (CarIsDeadException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
 
@@ -137,7 +163,7 @@ namespace Csharp_Concepts_Std
             r2.Display();
         }
 
-        // 
+        // Passing Reference Types by Reference
         private static void SendAPersonByReference(ref Person p)
         {
             // Change some data of "p".
@@ -146,6 +172,17 @@ namespace Csharp_Concepts_Std
             p = new Person("Nikki", 999);
         }
 
+        // Passing Reference Types by Reference
+        private static void PassingRefTypesAsRefTypes()
+        {
+            Console.WriteLine("***** Passing Person object by reference *****");
+            Person mel = new Person("Mel", 23);
+            Console.WriteLine("Before by ref call, Person is:");
+            mel.Display();
+            SendAPersonByReference(ref mel);
+            Console.WriteLine("After by ref call, Person is:");
+            mel.Display();
+        }
 
         // Create concurrency and then solve concurrency using lock keyword and Monitor type
         private static void Concurrency()
@@ -335,6 +372,18 @@ namespace Csharp_Concepts_Std
 
         
 
+    }
+
+
+    [Serializable]
+    public class MyException : Exception
+    {
+        public MyException() { }
+        public MyException(string message) : base(message) { }
+        public MyException(string message, Exception inner) : base(message, inner) { }
+        protected MyException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
     

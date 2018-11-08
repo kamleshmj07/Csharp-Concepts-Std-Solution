@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\Car.cs" />
+    <Compile Include="Exceptions\CarIsDeadException.cs" />
     <Compile Include="MemberShadowing\ThreeDCircle.cs" />
     <Compile Include="MemberShadowing\Circle.cs" />
     <Compile Include="Program.cs" />

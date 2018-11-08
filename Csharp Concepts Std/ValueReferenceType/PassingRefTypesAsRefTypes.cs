@@ -11,14 +11,37 @@ namespace Csharp_Concepts_Std.ValueReferenceType
         private string _Name;
         private int _Age;
 
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+
+            set
+            {
+                _Name = value;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return _Age;
+            }
+
+            set
+            {
+                _Age = value;
+            }
+        }
+
         public Person(string name, int age)
         {
             this.Name = name;
             this.Age = age;
         }
-
-        public int Age { get => _Age; set => _Age = value; }
-        public string Name { get => _Name; set => _Name = value; }
 
         public void Display()
         {

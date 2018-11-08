@@ -1,0 +1,6 @@
+C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.exe.config
+C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.csprojResolveAssemblyReference.cache
+C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.exe
+C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.pdb
+C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.exe
+C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.pdb
