@@ -9,6 +9,8 @@ using Csharp_Concepts_Std.MemberShadowing;
 using Csharp_Concepts_Std.Threading;
 using Csharp_Concepts_Std.ValueReferenceType;
 using Csharp_Concepts_Std.Exceptions;
+using Csharp_Concepts_Std.Interfaces;
+using System.Collections;
 
 namespace Csharp_Concepts_Std
 {
@@ -53,6 +55,14 @@ namespace Csharp_Concepts_Std
             #endregion
 
 
+
+            #endregion
+
+            #region Use of IEnumerator and IEnumerable
+
+            CustomEnumerator();
+
+            CustomEnumeratorManual();
 
             #endregion
 
@@ -107,7 +117,7 @@ namespace Csharp_Concepts_Std
         private static void MultipleExceptionHandling()
         {
             Console.WriteLine("***** Handling Multiple Exceptions *****\n");
-            Car myCar = new Car(90, "Rusty");
+            Exceptions.Car myCar = new Exceptions.Car(90, "Rusty");
             try
             {
                 // Case 1 : Trip Arg out of range exception.
@@ -120,7 +130,7 @@ namespace Csharp_Concepts_Std
                 }
 
             }
-            catch (CarIsDeadException e)
+            catch (Exceptions.CarIsDeadException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -370,20 +380,37 @@ namespace Csharp_Concepts_Std
             return x + y;
         }
 
-        
+        // Use of IEnumerator and IEnumerable
+        private static void CustomEnumerator()
+        {
+            Console.WriteLine("***** Fun with IEnumerable / IEnumerator *****\n");
+            Garage carLot = new Garage();
+            
+            // Hand over each car in the collection?
+            foreach (Interfaces.Car c in carLot)
+            {
+                Console.WriteLine("{0} is going {1} MPH", c.PetName, c.CurrentSpeed);
+            }
+        }
 
-    }
+        // Use of IEnumerator and IEnumerable
+        private static void CustomEnumeratorManual()
+        {
+            Console.WriteLine();
+            Console.WriteLine("***** Manual Fun with IEnumerable / IEnumerator *****\n");
+            Garage carLot = new Garage();
 
+            // Manually work with IEnumerator.
+            IEnumerator i = carLot.GetEnumerator();
+            i.MoveNext();
+            Interfaces.Car myCar = (Interfaces.Car)i.Current;
+            Console.WriteLine("{0} is going {1} MPH", myCar.PetName, myCar.CurrentSpeed);
 
-    [Serializable]
-    public class MyException : Exception
-    {
-        public MyException() { }
-        public MyException(string message) : base(message) { }
-        public MyException(string message, Exception inner) : base(message, inner) { }
-        protected MyException(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+            i.MoveNext();
+            myCar = (Interfaces.Car)i.Current;
+            Console.WriteLine("{0} is going {1} MPH", myCar.PetName, myCar.CurrentSpeed);
+        }
+
     }
 
     

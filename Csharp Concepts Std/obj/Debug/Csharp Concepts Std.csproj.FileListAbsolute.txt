@@ -4,3 +4,10 @@ C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts 
 C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.pdb
 C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.exe
 C:\Users\kmanjrekar\Desktop\Csharp-Concepts-Std-Solution-master\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.pdb
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.exe.config
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.exe
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\bin\Debug\Csharp Concepts Std.pdb
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.csprojAssemblyReference.cache
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.csproj.CoreCompileInputs.cache
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.exe
+C:\Users\KinG\Documents\Visual Studio 2017\Projects\Csharp Concepts Std Solution\Csharp Concepts Std\obj\Debug\Csharp Concepts Std.pdb
